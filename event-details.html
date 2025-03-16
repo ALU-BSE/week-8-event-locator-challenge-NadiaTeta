@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Details - Event Locator</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">Event Locator</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="events.html">Events</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Event Detail Section -->
+    <section class="event-detail py-5">
+        <div class="container">
+            <nav aria-label="breadcrumb" class="mb-4">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                    <li class="breadcrumb-item"><a href="events.html">Events</a></li>
+                    <li class="breadcrumb-item active" aria-current="page" id="breadcrumb-event-title">Event Details</li>
+                </ol>
+            </nav>
+            
+            <div class="row" id="event-detail-container">
+                <!-- Event details will be populated by JavaScript -->
+                <div class="col-lg-8">
+                    <div class="card mb-4">
+                        <img src="https://via.placeholder.com/800x400" class="card-img-top" alt="Event Image" id="event-image">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between align-items-center mb-3">
+                                <span class="badge bg-primary" id="event-category">Category</span>
+                                <small class="text-muted" id="event-date"><i class="fas fa-calendar-alt me-1"></i> Date</small>
+                            </div>
+                            <h1 class="card-title" id="event-title">Event Title</h1>
+                            <div class="d-flex align-items-center mb-3">
+                                <i class="fas fa-map-marker-alt text-danger me-2"></i>
+                                <span id="event-location">Location</span>
+                            </div>
+                            <div class="mb-4" id="event-description">
+                                <p>Description will be loaded here...</p>
+                            </div>
+                            
+                            <h4 class="mt-4 mb-3">Event Details</h4>
+                            <div id="event-details">
+                                <p>Additional event details will appear here...</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4">
+                    <!-- Event Information Card -->
+                    <div class="card mb-4">
+                        <div class="card-body">
+                            <h4 class="card-title">Event Information</h4>
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item d-flex justify-content-between">
+                                    <span><i class="fas fa-calendar-alt me-2"></i> Date:</span>
+                                    <span id="event-date-info">March 28, 2025</span>
+                                </li>
+                                <li class="list-group-item d-flex justify-content-between">
+                                    <span><i class="fas fa-clock me-2"></i> Time:</span>
+                                    <span id="event-time">2:00 PM - 10:00 PM</span>
+                                </li>
+                                <li class="list-group-item d-flex justify-content-between">
+                                    <span><i class="fas fa-map-marker-alt me-2"></i> Location:</span>
+                                    <span id="event-location-info">Central Park, New York</span>
+                                </li>
+                                <li class="list-group-item d-flex justify-content-between">
+                                    <span><i class="fas fa-ticket-alt me-2"></i> Price:</span>
+                                    <span id="event-price">$50 - $150</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Related Events Section -->
+            <div class="related-events mt-5">
+                <h3 class="mb-4">Similar Events You Might Like</h3>
+                <div class="row g-4" id="related-events-container">
+                    <!-- Related events will be populated by JavaScript -->
+                    <div class="col-md-4">
+                        <div class="card event-card h-100">
+                            <img src="images/11.jpeg" class="card-img-top" alt="Related Event">
+                            <div class="card-body">
+                                <div class="d-flex justify-content-between mb-2">
+                                    <span class="badge bg-primary">Music</span>
+                                    <small class="text-muted"><i class="fas fa-calendar-alt me-1"></i> Apr 12, 2025</small>
+                                </div>
+                                <h5 class="card-title">Jazz in the Park</h5>
+                                <p class="card-text mb-3">An evening of smooth jazz performed by local artists.</p>
+                                <div class="d-flex align-items-center mb-3">
+                                    <i class="fas fa-map-marker-alt text-danger me-2"></i>
+                                    <span>Bryant Park, New York</span>
+                                </div>
+                                <a href="event-details.html?id=104" class="btn btn-outline-primary">View Details</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-md-4">
+                        <div class="card event-card h-100">
+                            <img src="images/22.jpeg" class="card-img-top" alt="Related Event">
+                            <div class="card-body">
+                                <div class="d-flex justify-content-between mb-2">
+                                    <span class="badge bg-primary">Music</span>
+                                    <small class="text-muted"><i class="fas fa-calendar-alt me-1"></i> May 5, 2025</small>
+                                </div>
+                                <h5 class="card-title">Rock Concert</h5>
+                                <p class="card-text mb-3">Experience the thrill of live rock music with this powerful band.</p>
+                                <div class="d-flex align-items-center mb-3">
+                                    <i class="fas fa-map-marker-alt text-danger me-2"></i>
+                                    <span>Madison Square Garden, New York</span>
+                                </div>
+                                <a href="event-details.html?id=105" class="btn btn-outline-primary">View Details</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-md-4">
+                        <div class="card event-card h-100">
+                            <img src="images/33.jpeg" class="card-img-top" alt="Related Event">
+                            <div class="card-body">
+                                <div class="d-flex justify-content-between mb-2">
+                                    <span class="badge bg-primary">Music</span>
+                                    <small class="text-muted"><i class="fas fa-calendar-alt me-1"></i> Apr 20, 2025</small>
+                                </div>
+                                <h5 class="card-title">Classical Symphony</h5>
+                                <p class="card-text mb-3">A night of beautiful classical music performed by the Philharmonic Orchestra.</p>
+                                <div class="d-flex align-items-center mb-3">
+                                    <i class="fas fa-map-marker-alt text-danger me-2"></i>
+                                    <span>Lincoln Center, New York</span>
+                                </div>
+                                <a href="event-details.html?id=106" class="btn btn-outline-primary">View Details</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h5>Event Locator</h5>
+                    <p>Find the best events happening in your city</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <p>&copy; 2025 Event Locator. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="js/events.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>
